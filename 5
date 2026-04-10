@@ -1,0 +1,44 @@
+📘 Experiment Title
+
+Implementation of Multiple Linear Regression
+
+🎯 Aim
+
+To implement Multiple Linear Regression and predict the output value based on multiple input features.
+
+📖 Theory
+
+Multiple Linear Regression is a supervised machine learning algorithm used to predict a continuous value using two or more input features.
+
+It models the relationship between dependent and independent variables using a linear equation:
+
+𝑦=𝑏0+𝑏1𝑥1+𝑏2𝑥2
+Where:
+y = Predicted output (Price)
+𝑥1= Feature 1 (e.g., size)
+𝑥2= Feature 2 (e.g., number of rooms)
+𝑏0 = Intercept
+𝑏1,𝑏2 = Coefficients
+
+🔢 Algorithm Steps
+Import required libraries
+Prepare dataset with multiple features
+Create Linear Regression model
+Train the model using dataset
+Predict output for new input
+Display the predicted result
+
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Dataset
+X = np.array([[1000,2],[1500,3],[1800,3],[2000,4]])
+y = np.array([50,65,75,85])
+
+# Model
+model = LinearRegression()
+model.fit(X, y)
+
+# Prediction
+pred = model.predict([[2200,4]])
+print("Predicted Price:", pred)
