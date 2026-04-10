@@ -1,0 +1,44 @@
+📘 Experiment Title
+
+Implementation of Decision Tree Classifier
+
+🎯 Aim
+
+To implement a Decision Tree Classifier and visualize the decision tree for the given dataset.
+
+📖 Theory
+
+Decision Tree is a supervised machine learning algorithm used for classification and regression tasks.
+
+It works by splitting the dataset into smaller subsets based on feature values, forming a tree-like structure with:
+
+Root node → starting point
+Internal nodes → decision conditions
+Leaf nodes → final output (class label)
+
+The model selects the best splits using measures like:
+
+Gini Index
+Entropy (Information Gain)
+🔢 Algorithm Steps
+Import required libraries
+Prepare dataset (features and labels)
+Create Decision Tree model
+Train the model using dataset
+Visualize the decision tree
+Interpret the splits
+
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+import matplotlib.pyplot as plt
+
+# Dataset
+X = [[1,0],[1,1],[2,1],[3,1]]
+y = [0,0,1,1]
+
+# Model
+model = DecisionTreeClassifier(max_depth=3)
+model.fit(X, y)
+
+# Plot tree
+plot_tree(model)
+plt.show()
